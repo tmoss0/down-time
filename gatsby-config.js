@@ -5,6 +5,12 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+    siteMetadata: {
+        title: 'Down Time',
+        author: 'Tim Moss'
+    },
+
+    plugins: [
+        'gatsby-plugin-sass',
+    ],
 }
