@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+const dotenv = require("dotenv").config();
 module.exports = {
     siteMetadata: {
         title: 'Down Time',
@@ -11,13 +12,20 @@ module.exports = {
     },
 
     plugins: [
-        'gatsby-plugin-sass',
-        'gatsby-plug-react-helmet',
+        'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-source-contentful',
             options: {
-                spaceId: process.CONTENTFUL_SPACE_ID,
-                accessToken: process.CONTENTFUL_ACCESS_TOKEN
+                spaceId: process.env.CONTENTFUL_SPACE_ID,
+                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+            }
+        },
+        `gatsby-plugin-sass`,
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'src',
+                path: `${__dirname}/src/`
             }
         }
     ],

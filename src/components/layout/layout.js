@@ -11,11 +11,13 @@ import layoutStyles from './layout.module.scss';
  * 
  */
 
-const Layout = () => {
+const Layout = (props) => {
     return (
         <div className={layoutStyles.container}>
-            <Header />
-
+            <div className={layoutStyles.content}>
+                <Header />
+                {props.children}
+            </div>
             <Footer />
         </div>
     )

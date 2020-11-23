@@ -1,5 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import Layout from '../components/layout';
 
 /**
  * File: blog.js
@@ -11,8 +12,22 @@ import { graphql } from 'gatsby';
  * 
  */
 
-const Blog = () => {
+ export const query = graphql`
+    query($slug: String!) {
+        contentfulPost(slug: {eq: $slug}) {
+            title
+            publishDate(formatString: "MMMM Do, YYYY")
+        }
+    }
+ `
 
+const Blog = (props) => {
+    return (
+       <Layout>
+            <h1>{props.data.contentfulPost.title}</h1>
+            <p>{props.data.contentfulPost.publishDate}</p>
+       </Layout>
+    )
 }
 
 export default Blog;
