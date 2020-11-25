@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -24,6 +24,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "prettier": "2.1.2",
     "sass": "^1.29.0"
   },

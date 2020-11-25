@@ -14,9 +14,12 @@ import Layout from '../components/layout/layout';
 
  export const query = graphql`
     query($slug: String!) {
-        contentfulPost(slug: {eq: $slug}) {
+        contentfulBlogPost(slug: {eq: $slug}) {
             title
-            publishDate(formatString: "MMMM Do, YYYY")
+            publishedDate(formatString: "MMMM Do, YYYY")
+            content {
+                content
+            }
         }
     }
  `
@@ -24,8 +27,9 @@ import Layout from '../components/layout/layout';
 const Blog = (props) => {
     return (
        <Layout>
-            <h1>{props.data.contentfulPost.title}</h1>
-            <p>{props.data.contentfulPost.publishDate}</p>
+            <h1>{props.data.contentfulBlogPost.title}</h1>
+            <p>{props.data.contentfulBlogPost.publishedDate}</p>
+            <p>{props.data.contentfulBlogPost.content.content}</p>
        </Layout>
     )
 }
