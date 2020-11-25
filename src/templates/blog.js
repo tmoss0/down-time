@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { childMarkdownRemark } from 'gatsby-transformer-remark';
+
 import Layout from '../components/layout/layout';
+import blogStyles from './blog.modules.scss';
 
 /**
  * File: blog.js
@@ -18,7 +21,9 @@ import Layout from '../components/layout/layout';
             title
             publishedDate(formatString: "MMMM Do, YYYY")
             content {
-                content
+                childMarkdownRemark {
+                    html
+                }
             }
         }
     }
@@ -28,8 +33,8 @@ const Blog = (props) => {
     return (
        <Layout>
             <h1>{props.data.contentfulBlogPost.title}</h1>
-            <p>{props.data.contentfulBlogPost.publishedDate}</p>
-            <p>{props.data.contentfulBlogPost.content.content}</p>
+            <h4>{props.data.contentfulBlogPost.publishedDate}</h4>
+            <div dangerouslySetInnerHTML={{ __html: props.data.contentfulBlogPost.content.childMarkdownRemark.html}}></div>
        </Layout>
     )
 }

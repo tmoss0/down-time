@@ -13,7 +13,7 @@ import Layout from '../components/layout/layout';
 const Index = () => {
     return (
         <Layout>
-            
+            <p>This is the home page</p>
         </Layout>
     )   
 }

@@ -1,3 +1,14 @@
-header {
-    padding: 1rem 0 rem;
+.down-time-header {
+    padding: 0px;
+    margin: 3rem 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+}
+
+ul li {
+    padding-right: 2rem;
 }
