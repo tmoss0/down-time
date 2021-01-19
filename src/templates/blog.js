@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { childMarkdownRemark } from 'gatsby-transformer-remark';
 
 import Layout from '../components/layout/layout';
-import blogStyles from './blog.modules.scss';
+// import blogStyles from './blog.modules.scss';
 
 /**
  * File: blog.js
