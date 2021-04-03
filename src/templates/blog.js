@@ -34,6 +34,7 @@ const Blog = (props) => {
        <Layout>
             <h1>{props.data.contentfulBlogPost.title}</h1>
             <h4>{props.data.contentfulBlogPost.publishedDate}</h4>
+            {/* <h4>By: {props.data.contentfulBlogPost.createdBy}</h4> */}
             <div dangerouslySetInnerHTML={{ __html: props.data.contentfulBlogPost.content.childMarkdownRemark.html}}></div>
        </Layout>
     )
