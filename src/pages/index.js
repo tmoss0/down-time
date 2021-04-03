@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/layout';
 
 /**
- * File: footer.js
+ * File: index.js
  * Description: the index page is the main page that all the components
  *              are rendered to
  * 
@@ -13,7 +13,7 @@ import Layout from '../components/layout/layout';
 const Index = () => {
     return (
         <Layout>
-            <p>This is the home page</p>
+            <h1>Welcome to Down Time!</h1>
         </Layout>
     )   
 }
