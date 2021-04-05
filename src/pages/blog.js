@@ -37,13 +37,13 @@ const Blog = () => {
 
     return (
        <Layout>
-            <h1>Articles</h1>
+            <h1>Entries</h1>
             <ol>
                 {data.allContentfulBlogPost.edges.map((edge) => {
                     return (
                         <li className={blogStyles.post}>
                             <Link to={`/blog/${edge.node.slug}`}>
-                                <h2>{edge.node.title}</h2>
+                                <h3>{edge.node.title}</h3>
                             </Link>          
                             <p>{edge.node.publishedDate}</p>
                         </li>
