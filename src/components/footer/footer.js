@@ -24,7 +24,7 @@ const Footer = () => {
 
     return (
         <footer className={footerStyles.footer}>
-            <p>{data.site.siteMetadata.author}</p>
+            {/* <p>{data.site.siteMetadata.author}</p> */}
         </footer>
     )
 }

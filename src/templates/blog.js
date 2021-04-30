@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/layout/layout';
 import {header} from './blog.module.scss';
 
