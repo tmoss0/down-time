@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { childMarkdownRemark } from 'gatsby-transformer-remark';
+
 import Layout from '../components/layout/layout';
 import {header} from './blog.module.scss';
 
@@ -33,7 +33,6 @@ const Blog = (props) => {
        <Layout>
             <h1 className={header}>{props.data.contentfulBlogPost.title}</h1>
             <h4>{props.data.contentfulBlogPost.publishedDate}</h4>
-            {/* <h4>By: {props.data.contentfulBlogPost.createdBy}</h4> */}
             <div dangerouslySetInnerHTML={{ __html: props.data.contentfulBlogPost.content.childMarkdownRemark.html}}></div>
        </Layout>
     )

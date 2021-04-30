@@ -37,7 +37,7 @@ const Blog = () => {
 
     return (
        <Layout>
-            <h1>Entries</h1>
+            <h1>Posts</h1>
             <ol>
                 {data.allContentfulBlogPost.edges.map((edge) => {
                     return (
