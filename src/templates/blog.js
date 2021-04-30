@@ -17,6 +17,7 @@ import {header} from './blog.module.scss';
  export const query = graphql`
     query($slug: String!) {
         contentfulBlogPost(slug: {eq: $slug}) {
+            author
             title
             publishedDate(formatString: "MMMM Do, YYYY")
             content {
@@ -32,6 +33,7 @@ const Blog = (props) => {
     return (
        <Layout>
             <h1 className={header}>{props.data.contentfulBlogPost.title}</h1>
+            <h4>{props.data.contentfulBlogPost.author}</h4>
             <h4>{props.data.contentfulBlogPost.publishedDate}</h4>
             <div dangerouslySetInnerHTML={{ __html: props.data.contentfulBlogPost.content.childMarkdownRemark.html}}></div>
        </Layout>
