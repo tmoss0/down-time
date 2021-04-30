@@ -49,7 +49,7 @@ module.exports = {
         {
             resolve: 'gatsby-plugin-load-script',
             options: {
-                src: "https://cdn.embedly.com/widgets/platform.js",
+                src: 'https://cdn.embedly.com/widgets/platform.js',
             }            
         },
     ],
