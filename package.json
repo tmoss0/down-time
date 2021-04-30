@@ -1,5 +1,5 @@
 {
-  "name": "Down Time",
+  "name": "Down-Time",
   "private": true,
   "description": "A gaming review site by Tim Moss",
   "version": "0.1.0",
@@ -14,8 +14,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^14.1.3",
-    "@contentful/rich-text-types": "^14.1.2",
     "gatsby": "^2.26.1",
     "gatsby-plugin-load-script": "^1.1.0",
     "gatsby-plugin-react-helmet": "^3.5.0",
@@ -26,8 +24,7 @@
     "gatsby-transformer-remark": "^2.11.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.3"
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
